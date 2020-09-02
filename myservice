@@ -1,0 +1,11 @@
+service myservice
+{
+  flags = REUSE
+  socket_type = stream
+  wait = no
+  user = root
+  server = /usr/bin/dotnet
+  server_args = run --project /app
+  disable = no
+  port = 4000
+}
